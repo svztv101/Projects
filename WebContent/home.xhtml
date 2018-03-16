@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<title>JSF Tutorial!</title>
+</head>
+
+<body>
+	#{helloWorld.getMessage()}
+
+	<h:form>
+		<h2>Method Binding</h2>
+		<h:commandButton id="submitButton" value="Submit"
+			action="#{userData.showResult}"
+			actionListener="#{userData.updateData}">
+		</h:commandButton>
+
+		<h2>ActionListener interface</h2>
+		<hr />
+
+		<h:commandButton id="submitButton1" value="Submit"
+			action="#{userData.showResult}">
+			<f:actionListener type="com.work.UserActionListener" />
+		</h:commandButton>
+
+		<h:commandButton id="submitButton3" value="Submit"
+			action="#{userData.showNav}">
+		</h:commandButton>
+
+	</h:form>
+</body>
+</html>
